@@ -1,7 +1,9 @@
 # ember-computed-migration
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Sample project with node script to migrate from depreacted .property() into computed.
+
+For migration I used custom babel plugin:
+* [babel-plugin-ember-property-computed](https://www.npmjs.com/package/babel-plugin-ember-property-computed)
 
 ## Prerequisites
 

@@ -35,8 +35,12 @@ const manageFile = (filepath) => fs.readFile(filepath, function (err, data) {
 
   // print the generated code to screen
   // implement save code to files - replace original one or create a new one.
-  console.log(out.code);
+  // for this case I don't overwrite existing ones. Just create a new transformed file.
+  // I decided to not overwrite anything to avoid unexpected problems.
+  fs.writeFile(filepath + "_new.js", out.code, function (err) {
+    if (err) throw err;
+  }) 
 });
 
 
-traverse("./app", manageFile, onlyJSFiles);
+traverse("./app/components", manageFile, onlyJSFiles);
