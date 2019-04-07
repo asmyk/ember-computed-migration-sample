@@ -1,0 +1,15 @@
+ 
+<div class="user-list">
+  {{#each this.profiles as |person|}}
+  <div class="user-profile">
+    <div class="user-profile__avatar">
+      <img src="{{person.picture}}" />
+    </div>
+
+    <div class="user-profile__bio">
+        <h4 class="user-profile__bio--title">{{person.fullName}}</h4>
+        <span class="user-profile__bio--subtitle">{{person.address}}</span>
+    </div>
+  </div>
+  {{/each}}
+</div>
